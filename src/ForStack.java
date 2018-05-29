@@ -1,50 +1,86 @@
 class Stack {
-    private int putlock, getlock;
-    private char s[];
+    private int tos;
+    private char stck[];
 
     Stack(int size) {
-        s = new char[size + 1];
-        putlock = getlock = 0;
+        stck = new char[size];
+        tos = 0;
     }
 
 
-    void push(char ch) {
-        if (putlock == s.length - 1) {
-            System.out.println(" - стек заполнен");
+    Stack(Stack ob) {
+        tos = ob.tos;
+        stck = new char[ob.stck.length];
+
+        for (int i = 0; i < tos; i++)
+            stck[i] = ob.stck[i];
+    }
+
+    Stack(char a[]){
+        stck = new char[a.length];
+
+        for (int i = i = 0; i < a.length; i++) {
+            push(a[i]);
+        }
+    }
+
+    void push (char ch) {
+        if (tos == stck.length) {
+            System.out.println(" -- стек заполнен");
             return;
         }
-        putlock++;
-        s[putlock] = ch;
+
+        stck[tos] = ch;
+        tos++;
     }
 
-    char pop(char num) {
-        if (getlock == putlock) {
-            System.out.println(" - стек пуст");
+    char pop() {
+        if(tos == 0) {
+            System.out.println(" -- стек пуст");
             return (char) 0;
         }
-        putlock--;
-        return s[putlock];
+
+        tos--;
+        return stck[tos];
     }
 }
 
-
-public class ForStack {
+class ForStack {
     public static void main(String[] args) {
-        Stack bigQ = new Stack (100);
-        Stack smallQ = new Stack(4);
+        Stack stk1 = new Stack(10);
+
+        char name[] = {'T', 'o', 'm'};
+
+        Stack stk2 = new Stack(name);
+
         char ch;
         int i;
 
-        System.out.println("Использование очереди  bigQ для сохранения алфавита");
-        for (i = 0; i < 26; i++)
-            bigQ.push((char) ('A' + i));
+        for (i = 0; i < 10; i++)
+            stk1.push((char) ('A' + i));
 
-        System.out.print("Содержимое очереди bigQ : ");
-        for (i = 0; i < 26; i++) {
-            ch = bigQ.pop(ch);
-            if (ch != (char) 0) System.out.print(ch);
+        Stack stk3 = new Stack(stk1);
+
+        System.out.print("Содержание stk1: ");
+        for (i = 9; i < 10; i++) {
+            ch = stk1.pop();
+            System.out.print(ch);
+        }
+
+        System.out.println();
+
+        System.out.print("Содержимое stk2: ");
+        for (i = 9; i < 10; i++) {
+            ch = stk2.pop();
+            System.out.print(ch);
+        }
+
+        System.out.println();
+
+        System.out.print("Содержимое stk3: ");
+        for (i = 9; i < 10; i++) {
+            ch = stk3.pop();
+            System.out.print(ch);
         }
     }
-
-
 }
