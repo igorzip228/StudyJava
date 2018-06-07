@@ -16,7 +16,7 @@ class Stack {
             stck[i] = ob.stck[i];
     }
 
-    Stack(char a[]){
+    Stack(char a[]) {
         stck = new char[a.length];
 
         for (int i = i = 0; i < a.length; i++) {
@@ -24,7 +24,7 @@ class Stack {
         }
     }
 
-    void push (char ch) {
+    void push(char ch) {
         if (tos == stck.length) {
             System.out.println(" -- стек заполнен");
             return;
@@ -35,7 +35,7 @@ class Stack {
     }
 
     char pop() {
-        if(tos == 0) {
+        if (tos == 0) {
             System.out.println(" -- стек пуст");
             return (char) 0;
         }

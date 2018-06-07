@@ -13,7 +13,7 @@ class Test1 {
 
         System.out.println("a и b перед вызовом: " + a + " " + b);
 
-        ob.noChange(a,b);
+        ob.noChange(a, b);
 
         System.out.println("a и b после вызова: " + a + " " + b);
     }

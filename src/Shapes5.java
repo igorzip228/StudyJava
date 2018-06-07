@@ -17,23 +17,33 @@ class TwoShape5 {
     }
 
 
-
     // методы доступа к закрытым переменным экземпляра width и height
-    double getWidth(){return width;}
-    double getHeight(){return height;}
-    void setWidth(double w){width = w;}
-    void setHeight(double h){height = h;}
+    double getWidth() {
+        return width;
+    }
+
+    double getHeight() {
+        return height;
+    }
+
+    void setWidth(double w) {
+        width = w;
+    }
+
+    void setHeight(double h) {
+        height = h;
+    }
 
     void showDim() {
-        System.out.println("Ширина и высота - " + width + " и "  + height);
+        System.out.println("Ширина и высота - " + width + " и " + height);
     }
 }
 
 
-class Triangle5 extends TwoShape5{
+class Triangle5 extends TwoShape5 {
     String style;
 
-    Triangle5(){
+    Triangle5() {
         super();
         style = "none";
     }
@@ -44,14 +54,14 @@ class Triangle5 extends TwoShape5{
         style = s;
     }
 
-    Triangle5(double x){
+    Triangle5(double x) {
         super(x);
 
         style = "закрашеный";
     }
 
 
-    double area(){
+    double area() {
         return getWidth() * getHeight() / 2;
     }
 

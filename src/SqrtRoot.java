@@ -1,8 +1,8 @@
 public class SqrtRoot {
     public static void main(String[] args) {
 
-        Vehicle minovan = new Vehicle(7,16, 21);
-        Vehicle sportcar = new Vehicle(2,14,12);
+        Vehicle minovan = new Vehicle(7, 16, 21);
+        Vehicle sportcar = new Vehicle(2, 14, 12);
 
         double gallons;
         int dist = 252;
@@ -21,13 +21,13 @@ public class SqrtRoot {
         int fuelcup;
         int mpg;
 
-        Vehicle(int p, int f, int m){
+        Vehicle(int p, int f, int m) {
             passengers = p;
             fuelcup = f;
             mpg = m;
         }
 
-        double fuelneeded (int miles) {
+        double fuelneeded(int miles) {
             return (double) miles / mpg;
         }
     }

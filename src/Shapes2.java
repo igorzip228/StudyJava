@@ -3,21 +3,32 @@ class TwoShape2 {
     private double height;
 
     // методы доступа к закрытым переменным экземпляра width и height
-    double getWidth(){return width;}
-    double getHeight(){return height;}
-    void setWidth(double w){width = w;}
-    void setHeight(double h){height = h;}
+    double getWidth() {
+        return width;
+    }
+
+    double getHeight() {
+        return height;
+    }
+
+    void setWidth(double w) {
+        width = w;
+    }
+
+    void setHeight(double h) {
+        height = h;
+    }
 
     void showDim() {
-        System.out.println("Ширина и высота - " + width + " и "  + height);
+        System.out.println("Ширина и высота - " + width + " и " + height);
     }
 }
 
 
-class Triangle2 extends TwoShape2{
+class Triangle2 extends TwoShape2 {
     String style;
 
-    double area(){
+    double area() {
         return getWidth() * getHeight() / 2;
     }
 

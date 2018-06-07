@@ -31,7 +31,7 @@ public class OverloadDemo {
         ob.ovlDemo(2);
         System.out.println();
 
-        resI = ob.ovlDemo(4,6);
+        resI = ob.ovlDemo(4, 6);
         System.out.println("Результат вызова ob.ovlDemo(4, 6) : " + resI);
         System.out.println();
 

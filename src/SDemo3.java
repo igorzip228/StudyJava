@@ -6,7 +6,7 @@ class StaticBlock {
         System.out.println("Внутри статического блока");
         rootOf2 = Math.sqrt(2.0);
         rootOf3 = Math.sqrt(3.0);
-}
+    }
 
     StaticBlock(String msg) {
         System.out.println(msg);
@@ -19,5 +19,5 @@ public class SDemo3 {
 
         System.out.println("Корень квадратный из 2 равен  " + StaticBlock.rootOf2);
         System.out.println("Корень квадратный из 3 равен  " + StaticBlock.rootOf3);
-        }
+    }
 }

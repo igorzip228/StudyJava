@@ -1,15 +1,15 @@
-class Err{
+class Err {
     String msg;
     int severity;
 
-    Err(String m, int s){
+    Err(String m, int s) {
         msg = m;
         severity = s;
     }
 }
 
 
-class ErrorInfo{
+class ErrorInfo {
     String msgs[] = {
             "Ошибка вывода",
             "Ошибка ввода",
@@ -19,7 +19,7 @@ class ErrorInfo{
     int howbad[] = {3, 3, 2, 4};
 
     Err getErrorInfo(int i) {
-        if(i >=0 & i < msgs.length)
+        if (i >= 0 & i < msgs.length)
             return new Err(msgs[i], howbad[i]);
         else
             return new Err("Несуществующий код ошибки", 0);

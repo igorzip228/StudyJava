@@ -1,5 +1,5 @@
 
-class Test{
+class Test {
     int a, b;
 
     Test(int i, int j) {
@@ -7,7 +7,7 @@ class Test{
         b = j;
     }
 
-    void  change(Test ob) {
+    void change(Test ob) {
         ob.a = ob.a + ob.b;
         ob.b = -ob.b;
     }
@@ -16,7 +16,7 @@ class Test{
 
 public class CallByRef {
     public static void main(String[] args) {
-        Test ob = new Test(15,20);
+        Test ob = new Test(15, 20);
         System.out.println("ob.a и ob.b перед вызовом: " + ob.a + " " + ob.b);
 
         ob.change(ob);

@@ -8,30 +8,40 @@ class TwoShape4 {
     }
 
 
-
     // методы доступа к закрытым переменным экземпляра width и height
-    double getWidth(){return width;}
-    double getHeight(){return height;}
-    void setWidth(double w){width = w;}
-    void setHeight(double h){height = h;}
+    double getWidth() {
+        return width;
+    }
+
+    double getHeight() {
+        return height;
+    }
+
+    void setWidth(double w) {
+        width = w;
+    }
+
+    void setHeight(double h) {
+        height = h;
+    }
 
     void showDim() {
-        System.out.println("Ширина и высота - " + width + " и "  + height);
+        System.out.println("Ширина и высота - " + width + " и " + height);
     }
 }
 
 
-class Triangle4 extends TwoShape4{
+class Triangle4 extends TwoShape4 {
     String style;
 
 
-    Triangle4(String s, double w, double h){
+    Triangle4(String s, double w, double h) {
         super(w, h);
 
         style = s;
     }
 
-    double area(){
+    double area() {
         return getWidth() * getHeight() / 2;
     }
 

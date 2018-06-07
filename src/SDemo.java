@@ -1,7 +1,8 @@
 class StaticDemo {
     int x;
     static int y;
-    int sum(){
+
+    int sum() {
         return x + y;
     }
 }

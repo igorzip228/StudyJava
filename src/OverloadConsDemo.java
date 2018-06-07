@@ -1,12 +1,12 @@
-class  MyClass {
+class MyClass {
     int x;
 
-    MyClass(){
+    MyClass() {
         System.out.println("Внутри MyClass().");
         x = 0;
     }
 
-    MyClass(int i){
+    MyClass(int i) {
         System.out.println("Внутри MyClass(int).");
         x = i;
     }
@@ -16,7 +16,7 @@ class  MyClass {
         x = (int) d;
     }
 
-    MyClass(int i, int j){
+    MyClass(int i, int j) {
         System.out.println("Внутри MyClass(int, int).");
         x = i * j;
     }

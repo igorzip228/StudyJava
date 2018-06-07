@@ -3,15 +3,15 @@ class TwoShape {
     double height;
 
     void showDim() {
-        System.out.println("Ширина и высота - " + width + " и "  + height);
+        System.out.println("Ширина и высота - " + width + " и " + height);
     }
 }
 
 
-class Triangle extends TwoShape{
+class Triangle extends TwoShape {
     String style;
 
-    double area(){
+    double area() {
         return width * height / 2;
     }
 

@@ -4,7 +4,8 @@ public class LogicalOpTable {
 
         System.out.println("P\t\tQ\t\tAND\t\tOR\t\tXOR\t\tNOT");
 
-        p = true; q = true;
+        p = true;
+        q = true;
         System.out.print(p + "\t" + q + "\t");
         if ((p & q)) {
             System.out.print("1\t\t");
@@ -24,7 +25,8 @@ public class LogicalOpTable {
             System.out.println("0\t\t");
 
 
-        p = true; q = false;
+        p = true;
+        q = false;
         System.out.print(p + "\t" + q + "\t");
         if ((p & q)) {
             System.out.print("1\t\t");
@@ -43,7 +45,8 @@ public class LogicalOpTable {
         } else
             System.out.println("0\t\t");
 
-        p = false; q = true;
+        p = false;
+        q = true;
         System.out.print(p + "\t" + q + "\t");
         if ((p & q)) {
             System.out.print("1\t\t");
@@ -62,7 +65,8 @@ public class LogicalOpTable {
         } else
             System.out.println("0\t\t");
 
-        p = false; q = false;
+        p = false;
+        q = false;
         System.out.print(p + "\t" + q + "\t");
         if ((p & q)) {
             System.out.print("1\t\t");

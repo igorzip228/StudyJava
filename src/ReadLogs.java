@@ -11,7 +11,7 @@ public class ReadLogs {
     public static void main(String[] args) throws IOException {
 
         System.out.print("Введите путь к директории, где лежат логи: ");
-        Scanner scanner = new Scanner( System.in );
+        Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
         //System.out.println(input); //     /home/qa-1/Загрузки/Logs
 
@@ -51,13 +51,13 @@ public class ReadLogs {
 }
 
 
-class Log{
+class Log {
     String day;
     String date;
     String time;
     String logs;
 
-    Log(String den, String d, String t,String l) {
+    Log(String den, String d, String t, String l) {
         day = den;
         date = d;
         time = t;
